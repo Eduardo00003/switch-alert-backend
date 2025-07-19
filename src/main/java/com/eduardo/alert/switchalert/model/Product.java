@@ -2,6 +2,7 @@ package com.eduardo.alert.switchalert.model;
 
 import jakarta.persistence.*;
 
+
 // @Enity marking a java class as JPA entity 
 // this lets JPA know to map it to a table
 @Entity
@@ -12,7 +13,16 @@ public class Product {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
+  @Enumerated(EnumType.STRING)
+  private Retailer retailer;
+  private String productURL;
+  
   private boolean inStock;
+
+
+
+
+
   // this empty constructor is required for the requirements of jpa 
   public Product(){}
 
