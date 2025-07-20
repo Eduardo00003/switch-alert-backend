@@ -13,8 +13,10 @@ public class Product {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
+
   @Enumerated(EnumType.STRING)
   private Retailer retailer;
+
   private String productURL;
   
   private boolean inStock;
@@ -25,6 +27,14 @@ public class Product {
 
   // this empty constructor is required for the requirements of jpa 
   public Product(){}
+  public Retailer getRetailer(){
+    return retailer;
+  }
+  public void setRetailer(Retailer retailer) {
+    this.retailer = retailer;
+  }
+
+ 
 
   public Long getId(){
     return id;
@@ -35,7 +45,13 @@ public class Product {
   public boolean getInstock(){
     return inStock;
   }
-  
+  public String getProductURL() {
+    return productURL;
+  }
+
+  public void setProductUrl(String productUrl){
+    this.productURL = productUrl;
+  }
   public void setID(Long id){
     this.id = id;
   }
