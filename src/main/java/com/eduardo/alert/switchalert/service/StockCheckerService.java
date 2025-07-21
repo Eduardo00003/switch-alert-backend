@@ -59,3 +59,4 @@ public class StockCheckerService {
     productRepo.save(p);
   }
 }
+hafashdfhas
